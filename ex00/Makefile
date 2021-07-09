@@ -5,6 +5,8 @@ NAME	= ex00
 SRCS	=	Animal.cpp \
 			Dog.cpp \
 			Cat.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp \
 			main.cpp
 
 CC		= clang++
