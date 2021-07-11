@@ -22,10 +22,15 @@ Cat::Cat(const Cat& copy)
 	*brain = *(copy.brain);
 }
 
-void Cat::operator=(const Cat& op)
+Cat& Cat::operator=(const Cat& op)
 {
+	if (this == &op)
+		return (*this);
 	std::cout << "Copy Cat!" << std::endl;
-	brain = op.brain;
+	delete this->brain;
+	brain = new Brain(*op.brain);
+	return (*this);
+
 }
 
 

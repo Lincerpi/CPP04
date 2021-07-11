@@ -8,7 +8,7 @@ Animal::Animal()
 
 Animal::~Animal()
 {
-	std::cout << "Call destructor Animal!" << std::endl;
+	std::cout << "Call Destructor Animal!" << std::endl;
 }
 
 Animal::Animal(const Animal& copy)

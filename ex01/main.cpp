@@ -12,19 +12,15 @@ int main()
 	if (x <= 0)
 		std::cout << "ERROR" << std::endl;
 	const Animal* animal[x];
-	// const Animal* i = new Dog();
-	// const Animal* j = new Cat();
+	Cat j = Cat();
+	Dog i = Dog();
 	int z = 0;
 	while (z < x)
 	{
 		if (z % 2)
-		{
-			animal[z++] = new Dog();
-		}
+			animal[z++] = new Dog(i);
 		else
-		{
-			animal[z++] = new Cat();
-		}
+			animal[z++] = new Cat(j);
 	}
 	z = 0;
 	while (z < x)
@@ -32,8 +28,6 @@ int main()
 	z = 0;
 	while (z < x)
 		delete animal[z++];
-	// delete j;//should not create a leak
-	// delete i;
 
 	return (0);
 }
