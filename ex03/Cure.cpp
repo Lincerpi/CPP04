@@ -6,11 +6,15 @@ Cure::Cure(): AMateria("cure")
 Cure::~Cure()
 {}
 
-Cure::Cure(const Cure&): AMateria("cure")
-{}
+Cure::Cure(const Cure& copy): AMateria("cure")
+{
+	(void)copy;
+}
 
 Cure& Cure::operator=(const Cure&)
-{}
+{
+	return (*this);
+}
 
 AMateria* Cure::clone() const
 {

@@ -18,8 +18,13 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	ICharacter* bob = new Character("bob");
+	std::cout << me->getName() << std::endl;
 	me->use(0, *bob);
 	me->use(1, *bob);
+	tmp = src->createMateria("ice");
+	bob->equip(tmp);
+	std::cout << bob->getName() << std::endl;
+	bob->use(0, *me);
 	delete bob;
 	delete me;
 	delete src;
